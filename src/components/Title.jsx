@@ -1,9 +1,7 @@
-const Title = ({ text }) => {
+const Title = ({ children }) => {
   return (
     <>
-      <h1 className="text-white text-3xl font-bold">
-        {text}
-      </h1>
+      <h1 className="text-white text-3xl font-bold">{children}</h1>
     </>
   );
 };

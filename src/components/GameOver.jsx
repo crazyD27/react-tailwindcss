@@ -1,13 +1,15 @@
-import Title from './Title';
+import { Link } from 'react-router-dom';
+
 import Button from './Button';
-import Paragraph from './Paragraph';
 
 const GameOver = ({ score }) => {
   return (
     <>
-      <Title text="Fim de jogo!" />
-      <Paragraph text={`A sua pontuação foi ${score}`} />
-      <Button text="Reiniciar" />
+      <h1>Fim de jogo!</h1>
+      <p>A sua pontuação foi {score}</p>
+      <Link to="/new-game">
+        <Button text="Reiniciar" />
+      </Link>
     </>
   );
 };

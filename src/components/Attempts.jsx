@@ -1,9 +1,7 @@
 const Attempts = ({ attempts }) => {
   return (
     <>
-      <p className="text-white text-sm">
-        <span>Você tem {attempts} tentativa(s).</span>
-      </p>
+      <p>Você tem {attempts} tentativa(s).</p>
     </>
   );
 };

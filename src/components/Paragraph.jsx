@@ -1,7 +1,7 @@
-const Paragraph = ({ text }) => {
+const Paragraph = ({ children }) => {
   return (
     <>
-      <p className="text-white text-center">{text}</p>
+      <p>{children}</p>
     </>
   );
 };
