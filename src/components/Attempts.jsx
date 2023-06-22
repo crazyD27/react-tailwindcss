@@ -1,7 +1,9 @@
+import Paragraph from './Paragraph';
+
 const Attempts = ({ attempts }) => {
   return (
     <>
-      <p>Você tem {attempts} tentativa(s).</p>
+      <Paragraph>Você tem {attempts} tentativa(s).</Paragraph>
     </>
   );
 };
