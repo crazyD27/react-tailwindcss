@@ -4,8 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Play from './components/Play';
 import GameOver from './components/GameOver';
 import Game from './components/Game';
+import Win from './components/Win';
 
 const App = () => {
+  const [score, setScore] = React.useState(0);
+
   return (
     <>
       <div className="w-full h-screen bg-blue-950 grid place-items-center">
@@ -13,8 +16,9 @@ const App = () => {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Play />}></Route>
-              <Route path="/new-game" element={<Game />}></Route>
-              <Route path="/game-over" element={<GameOver />}></Route>
+              <Route path="/game" element={<Game score={score} setScore={setScore} />}></Route>
+              <Route path="/game-over" element={<GameOver score={score} />}></Route>
+              <Route path="/win" element={<Win score={score} />}></Route>
             </Routes>
           </BrowserRouter>
         </div>
