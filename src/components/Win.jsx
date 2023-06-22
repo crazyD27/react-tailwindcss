@@ -1,12 +1,16 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+
+import Title from './Title';
+import Paragraph from './Paragraph';
+import Button from './Button';
 
 const Win = ({ score }) => {
   return (
     <>
-      <h1>Voce ganhou!</h1>
-      <p>A sua pontuação foi {score}</p>
-      <Link to="/new-game">
-        <Button text="Reiniciar" />
+      <Title>Voce ganhou!</Title>
+      <Paragraph>A sua pontuação foi {score}</Paragraph>
+      <Link to="/game">
+        <Button text="Jogar novamente" />
       </Link>
     </>
   );
