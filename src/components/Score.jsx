@@ -1,7 +1,9 @@
+import Paragraph from './Paragraph';
+
 const Score = ({ score }) => {
   return (
     <>
-      <p>Pontuação: {score}</p>
+      <Paragraph>Pontuação: {score}</Paragraph>
     </>
   );
 };
