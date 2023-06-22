@@ -15,10 +15,10 @@ const App = () => {
         <div className="flex flex-col items-center justify-center gap-4">
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Play />}></Route>
-              <Route path="/game" element={<Game score={score} setScore={setScore} />}></Route>
-              <Route path="/game-over" element={<GameOver score={score} />}></Route>
-              <Route path="/win" element={<Win score={score} />}></Route>
+              <Route path="/" element={<Play />} />
+              <Route path="/game" element={<Game score={score} setScore={setScore} />} />
+              <Route path="/game-over" element={<GameOver score={score} />} />
+              <Route path="/win" element={<Win score={score} />} />
             </Routes>
           </BrowserRouter>
         </div>
