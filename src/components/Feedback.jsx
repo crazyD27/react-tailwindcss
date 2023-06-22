@@ -1,19 +1,22 @@
 const Feedback = () => {
+  const Wrapper = ({ bg, text }) => {
+    return (
+      <>
+        <div className="flex items-center gap-2">
+          <div className={`${bg} w-4 h-4`}></div>
+          <span className="uppercase font-semibold text-white text-sm">
+            {text}
+          </span>
+        </div>
+      </>
+    );
+  };
+
   return (
     <>
       <div className="flex gap-4 mt-3">
-        <div className="flex items-center gap-2">
-          <div className="bg-red-600 w-4 h-4"></div>
-          <span className="uppercase font-semibold text-white text-sm">
-            Errou
-          </span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="bg-green-600 w-4 h-4"></div>
-          <span className="uppercase font-semibold text-white text-sm">
-            Acertou
-          </span>
-        </div>
+        <Wrapper bg="bg-red-600" text="Errou" />
+        <Wrapper bg="bg-green-600" text="Acertou" />
       </div>
     </>
   );
