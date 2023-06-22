@@ -1,3 +1,5 @@
+import Paragraph from './Paragraph';
+
 const UsedLetters = ({ currentWord, usedLetters }) => {
   const renderUsedLetters = () => {
     return usedLetters.map((letter, index) => {
@@ -14,10 +16,12 @@ const UsedLetters = ({ currentWord, usedLetters }) => {
   };
 
   return (
-    <p className="flex gap-2">
-      <span>Letras já utilizadas:</span>
-      {renderUsedLetters()}
-    </p>
+    <>
+      <Paragraph customStyles="flex gap-2">
+        <span>Letras já utilizadas:</span>
+        {renderUsedLetters()}
+      </Paragraph>
+    </>
   );
 };
 
